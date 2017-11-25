@@ -17,10 +17,16 @@ bool GameScene::init()
 		CC_SAFE_RETAIN(_menuLayer); 
 		_backgroundLayer = BackgroundLayer::create();
 		CC_BREAK_IF(!_backgroundLayer);
-		addChild(_backgroundLayer);
+		this->addChild(_backgroundLayer);
 		_fishLayer = FishLayer::create();
 		CC_BREAK_IF(!_fishLayer);
-		addChild(_fishLayer);
+		this->addChild(_fishLayer);
+		_cannonLayer = CannonLayer::create();
+		CC_BREAK_IF(!_cannonLayer);
+		this->addChild(_cannonLayer);
+		_touchLayer = TouchLayer::create();
+		CC_BREAK_IF(!_touchLayer);
+		this->addChild(_touchLayer);
 		return true;
 	} while (0);
 	return false;
@@ -35,6 +41,13 @@ void GameScene::preloadResources(void)
 	spriteFrameCache->addSpriteFramesWithFile("FishActor-Shark-ipadhd.plist");		//同上
 	spriteFrameCache->addSpriteFramesWithFile("FishActor-Small-ipadhd.plist");		//同上
 	spriteFrameCache->addSpriteFramesWithFile("FishActor-Mid-ipadhd.plist");			//同上
+	spriteFrameCache->addSpriteFramesWithFile("cannon-ipadhd.plist");
+	spriteFrameCache->addSpriteFramesWithFile("Item-chaojiwuqi-ipadhd.plist");
+
+	CCTextureCache *textureCache = CCTextureCache::sharedTextureCache();
+	textureCache->addImage("ui_button_63-ipadhd.png");
+	textureCache->addImage("ui_button_65-ipadhd.png");
+
 	char str[][50] = { "SmallFish", "Croaker", "AngelFish", "Amphiprion", "PufferS", 
 		"Bream", "Porgy", "Chelonian", "Lantern", "Ray", "Shark", "GoldenTrout", "GShark", 
 		"GMarlinsFish", "GrouperFish", "JadePerch", "MarlinsFish", "PufferB" };
@@ -62,4 +75,14 @@ void GameScene::preloadResources(void)
 GameScene::~GameScene()
 {
 	CC_SAFE_RELEASE(_menuLayer);
+}
+
+void GameScene::cannonAimAt(CCPoint target)
+{
+	_cannonLayer->aimAt(target);
+}
+
+void GameScene::cannonShootTo(CCPoint target)
+{
+	_cannonLayer->shootTo(target);
 }
