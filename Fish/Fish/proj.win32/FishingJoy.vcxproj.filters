@@ -15,9 +15,6 @@
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\StaticData.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\FishLayer.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
@@ -63,7 +60,13 @@
     <ClCompile Include="..\Classes\PanelLayer.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\FishJoyData.cpp">
+    <ClCompile Include="..\Classes\FishingJoyData.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ScheduleCountDown.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PersonalAudioEngine.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -72,9 +75,6 @@
       <Filter>win32</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\StaticData.h">
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AppMacros.h">
@@ -125,7 +125,16 @@
     <ClInclude Include="..\Classes\PanelLayer.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\FishJoyData.h">
+    <ClInclude Include="..\Classes\FishingJoyData.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ScheduleCountDown.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ScheduleCounterDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PersonalAudioEngine.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>
